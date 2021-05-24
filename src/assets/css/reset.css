@@ -1,0 +1,25 @@
+
+/******************************************RESET MEYER*************************************************/
+/* http://meyerweb.com/eric/tools/css/reset/ v2.0 | 20110126License: none (public domain)*/
+a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
+/******************************************END RESET MEYER********************************************/
+
+
+
+/*****************************************RESET PERSO***************************************************/
+*{box-sizing: border-box;}
+html {font-size: 62.5%;}/*Bonne methode pour la taille des fonts*/
+body {font-size: 1.6rem;font-family:'Poppins',Arial,sans-serif;color:#313445;box-sizing: border-box;}/*Bonne methode pour la taille des fonts*/
+a:link,a:visited,a:hover,a:active{color:#313445}
+button,button[type=submit]{border:none;margin:0;padding:0;width:auto;overflow:visible;background:0 0;color:inherit;font:inherit;line-height:normal;-webkit-font-smoothing:inherit;-moz-osx-font-smoothing:inherit;-webkit-appearance:none;cursor:pointer;outline:0}
+button::-moz-focus-inner {border: 0;padding: 0;}
+textarea:focus, input:focus{outline: none;}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */color: #c1c1c1;opacity: 1; /* Firefox */}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */color: #c1c1c1;}
+::-ms-input-placeholder { /* Microsoft Edge */color: #c1c1c1;}
+select{webkit-appearance: button;appearance: button;outline: none;} /*pour virer la border comme le style par defaut des boutons on click*/  
+img{ max-width: 100%;height: auto; }
+strong{font-weight: 600;}
+/*****************************************END RESET PERSO***************************************************/
+
+

@@ -1,0 +1,146 @@
+
+
+#toDoList{/* background-color:#fff; */border-radius:5px;overflow:hidden;/* max-width:600px */}
+#toDoList h2{text-align:center;background: #313445;color:#fff;padding: 2rem;font-weight: 600;font-size:2rem;border-bottom:1px solid #252735;}
+#toDoList form{background: #313445;padding:1rem;display:flex;justify-content:center;}
+#toDoList form input[type="text"]{width: 90%;border: 0;padding: 0 15px;border-radius:5px 0 0 5px;padding: 1rem;
+    transition: all 0.2s ease-out ;font-size: 1.5rem;}
+#toDoList form input[type="text"]:focus{-webkit-box-shadow:inset 0 0 0 2px #ff385e;
+    box-shadow:inset 0 0 0 2px #ff385e;background-color: #fff;}
+
+
+#toDoList form button{background-color:#ff385e;width: 50px;/* min-width: 60px; */border-radius:0 5px 5px 0;font-size:3rem;color:#fff;}
+#toDoList ul li{background-color:#313445;color:#879eaf;position:relative;line-height:2.8rem;
+    transition: all 0.2s ease-out;
+}
+#toDoList ul li:hover{background-color: #181922;}
+#toDoList ul li:nth-child(odd){background-color:#252735;}
+#toDoList ul li:nth-child(odd):hover{background-color:#111218;}
+#toDoList ul li input{display:none}
+#toDoList ul li label{padding: 1rem 2em 1rem 4rem;display:inline-block;width: calc(100% - 80px);}
+#toDoList ul li:nth-child(odd){background-color:#252735;}
+#toDoList ul li span{display:inline-block;/* background-color:red; */position:absolute;z-index:1;right:0;top:0;bottom:0;width: 60px;display:flex;flex-direction:column;justify-content:center;color:#fff;text-align:center;font-size: 2.5rem;}
+#toDoList ul li:last-child{border-radius:0 0 5px 5px}
+
+
+
+
+#toDoList form button span{transition: all 0.3s ease-out;transform: scale(0.8);display: block;}
+#toDoList form button:hover span{transform: scale(1.2);}
+
+#toDoList ul li input[type="checkbox"]:checked + label{
+ /*   text-decoration: line-through;
+    text-decoration-color:#ff385e;*/
+}
+#toDoList ul li input[type="checkbox"]+label{
+    cursor: pointer;
+}
+#toDoList ul li input[type="checkbox"]:checked + label{
+    position: relative;
+}
+
+#toDoList ul li input[type="checkbox"] + label::before{
+    content:"";
+    position: absolute;
+    margin-left:-3%;
+ width: 5px;
+ height: 10px;
+ border:5px solid #60D6A7;
+ border-top:0;
+ border-left:0;
+ transform: rotate(45deg);
+ margin-top:0.5%;
+ opacity: 0;
+ transition: all 0.2s ease-out;
+ transition: scale(0);
+ }
+
+
+#toDoList ul li input[type="checkbox"]:checked + label::before{
+opacity: 1;
+transition: scale(1);
+
+}
+
+#toDoList ul li span{cursor: pointer; transition: all 0.2s ease-out ;}
+#toDoList ul li span:hover{color: #ff385e;transition: scale(1.2);}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#toDoList{/* background-color:#fff; */border-radius:5px;overflow:hidden;/* max-width:600px */}
+#toDoList h2{text-align:center;background: #313445;color:#fff;padding: 2rem;font-weight: 600;font-size:2rem;border-bottom:1px solid #252735;}
+#toDoList form{background: #313445;padding:1rem;display:flex;justify-content:center;}
+#toDoList form input[type="text"]{width: 90%;border: 0;padding: 0 15px;border-radius:5px 0 0 5px;padding: 1rem;
+    transition: all 0.2s ease-out ;font-size: 1.5rem;}
+#toDoList form input[type="text"]:focus{-webkit-box-shadow:inset 0 0 0 2px #ff385e;
+    box-shadow:inset 0 0 0 2px #ff385e;background-color: #fff;}
+
+
+#toDoList form button{background-color:#ff385e;width: 50px;/* min-width: 60px; */border-radius:0 5px 5px 0;font-size:3rem;color:#fff;}
+#toDoList ul li{background-color:#313445;color:#879eaf;position:relative;line-height:2.8rem;
+    transition: all 0.2s ease-out;
+}
+#toDoList ul li:hover{background-color: #181922;}
+#toDoList ul li:nth-child(odd){background-color:#252735;}
+#toDoList ul li:nth-child(odd):hover{background-color:#111218;}
+#toDoList ul li input{display:none}
+#toDoList ul li label{padding: 1rem 2em 1rem 4rem;display:inline-block;width: calc(100% - 80px);}
+#toDoList ul li:nth-child(odd){background-color:#252735;}
+#toDoList ul li span{display:inline-block;/* background-color:red; */position:absolute;z-index:1;right:0;top:0;bottom:0;width: 60px;display:flex;flex-direction:column;justify-content:center;color:#fff;text-align:center;font-size: 2.5rem;}
+#toDoList ul li:last-child{border-radius:0 0 5px 5px}
+
+
+
+
+#toDoList form button span{transition: all 0.3s ease-out;transform: scale(0.8);display: block;}
+#toDoList form button:hover span{transform: scale(1.2);}
+
+#toDoList ul li input[type="checkbox"]:checked + label{
+ /*   text-decoration: line-through;
+    text-decoration-color:#ff385e;*/
+}
+#toDoList ul li input[type="checkbox"]+label{
+    cursor: pointer;
+}
+#toDoList ul li input[type="checkbox"]:checked + label{
+    position: relative;
+}
+
+#toDoList ul li input[type="checkbox"] + label::before{
+    content:"";
+    position: absolute;
+    margin-left:-3%;
+ width: 5px;
+ height: 10px;
+ border:5px solid #60D6A7;
+ border-top:0;
+ border-left:0;
+ transform: rotate(45deg);
+ margin-top:0.5%;
+ opacity: 0;
+ transition: all 0.2s ease-out;
+ transition: scale(0);
+ }
+
+
+#toDoList ul li input[type="checkbox"]:checked + label::before{
+opacity: 1;
+transition: scale(1);
+
+}
+
+#toDoList ul li span{cursor: pointer; transition: all 0.2s ease-out ;}
+#toDoList ul li span:hover{color: #ff385e;transition: scale(1.2);}

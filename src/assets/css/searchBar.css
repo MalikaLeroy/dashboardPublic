@@ -1,0 +1,124 @@
+
+#searchBarEdit{display:flex;justify-content:center;padding:6rem 0 3rem 0}
+#searchBarEdit > form {display: flex;
+    justify-content: stretch;
+    width: 50%;
+    background: #fff;
+    border-radius: 5px;
+    overflow: hidden;box-shadow: 0 0 20px 5px #e2e2e2;}
+#searchBarEdit > button{background-color:#313445;border-radius:5px;width:60px;height:60px;margin-left:20px }
+#searchBarEdit > button:last-child{margin-left:2rem}
+#searchBarEdit > button svg{width:20px;margin-top:5px}
+#searchBarEdit form input[type="search"]{width: 100%;
+    border: 0;
+    padding: 0 15px;
+    font-size: 1.8rem;}
+#searchBarEdit form button{    /* background-color: #fff; */
+    padding: 0 1.5em;
+    /* border-radius: 0px 5px 5px 0;*/}
+#searchBarEdit form button svg{width:25px;margin-top:5px}
+#searchBarEdit select{cursor:pointer;border:0;border-radius:5px 0px 0px 5px;font-size: 1.6rem;padding-left: 15px;}
+#searchBarEdit select option{background-color:#313445;color:#fff;cursor:pointer}
+#searchBarEdit select option:hover{background-color:#252735;cursor:pointer}
+#searchBarEdit > form {position: relative}
+#searchBarEdit > form input{position: relative;
+
+}
+
+#searchBarEdit form input:focus~ span{
+position: absolute;
+display: block;
+height: 5px;
+background: linear-gradient(0.25turn, #ff385e,#ff385e );
+bottom: 0px;
+z-index: 1;
+left:0;
+        right:100%;
+        opacity: 0;
+/*
+animation-duration: 0.3s;
+    animation-delay: 0s;
+    animation-name: focusOut;
+    animation-timing-function: ease-out;*/
+
+}
+
+
+#searchBarEdit form input:focus ~ span{
+    left:0;
+right:0;
+opacity: 1; 
+    animation-duration: 0.3s;
+    animation-delay: 0s;
+    animation-name: focusIn;
+    animation-timing-function: ease-out;
+    
+}
+
+
+
+
+
+  
+  @keyframes focusOut {
+    from {
+    
+      left:0;
+right:0;
+opacity: 1; 
+    }
+  
+    to {
+        left:0;
+        right:100%;
+        opacity: 0;
+    }
+  }
+
+  
+  
+  @keyframes focusIn {
+    from {
+    
+      left:0;
+right:100%; 
+    }
+  
+    to {
+        left:0;
+        right:0;
+        opacity: 1;
+    }
+  }
+
+/**Change le style du clear sur webkit**/
+  input[type="search"]::-webkit-search-cancel-button{
+    position:relative;
+    right:0px;  
+
+    -webkit-appearance: none;
+    height: 20px;
+    width: 20px;
+    border-radius:10px;
+    background: #fff;
+    cursor: pointer;
+}
+
+
+
+#searchBarEdit form button svg{opacity: 1;}
+#searchBarEdit form button svg {transition: all 0.3s ease-out;}
+#searchBarEdit form button:hover svg{transform: scale(1.2);}
+#searchBarEdit > button {position: relative;transition: all 0.3s ease-out;}
+#searchBarEdit > button span{color:#879eaf;font-size: 2rem;position: absolute;top:0;right: 8px;transition: all 0.3s ease-out;}
+
+#searchBarEdit > button svg,
+#searchBarEdit > button svg path{transition: all 0.3s ease-out;}
+
+
+
+#searchBarEdit > button:hover{background-color: #623a6c;}
+#searchBarEdit > button:hover span{color: #fff;}
+#searchBarEdit > button:hover svg{transform: scale(1.2) translateX(-4px) translateY(4px);fill:#fff;}
+#searchBarEdit > button:hover svg path{fill:#fff}
+

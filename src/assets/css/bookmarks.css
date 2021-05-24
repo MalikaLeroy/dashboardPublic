@@ -1,0 +1,248 @@
+main #titlePage{font-weight:600;font-size:4rem;font-weight:500;line-height:8rem;color:#623a6c}
+main.bookmarks h1#titlePage span:first-child{font-size:3rem;padding:0 2rem;color:#fff;background-color:#623a6c;border-radius:5px}
+main.bookmarks h1#titlePage span svg{width:25px;position:relative;top:5px;right:10px}
+main.bookmarks table{border-radius:5px;width:100%}
+main.bookmarks table tr:first-child > th:first-child{width: 85%;border-radius: 5px 0 0 0;}
+main.bookmarks table tr:first-child > th:last-child{width: 15%;width: 250px;padding-top:0.9rem;border-radius: 0 5px 0 0;}
+main.bookmarks table{table-layout: fixed;}
+main.bookmarks table thead tr:first-child{
+    
+    background:linear-gradient(0.25turn,#ff5677,#e79c82);
+
+
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ff5677+0,e79c82+100 */
+background: #ff5677; /* Old browsers */
+background: -moz-linear-gradient(left,  #ff5677 0%, #e79c82 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left,  #ff5677 0%,#e79c82 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right,  #ff5677 0%,#e79c82 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff5677', endColorstr='#e79c82',GradientType=1 ); /* IE6-9 */
+
+
+
+    
+    
+    
+    color:#fff;padding:2rem;font-weight:600}
+main.bookmarks table tr:first-child th:first-child{padding: 2rem;}
+main.bookmarks table tr > td a{color:#879eaf;text-decoration:none;line-height:2rem;font-size:1.5rem}
+main.bookmarks table tr > td a h2{color:#b04c74;font-size:1.8rem;font-weight:600;margin-bottom:1rem}
+main.bookmarks table tr td{font-size:1.2rem;vertical-align:middle;}
+main.bookmarks table tr th{width:85%;text-align:center}
+
+main.bookmarks table tr >td a{display:block;padding:3rem;display:block}
+
+main.bookmarks table tr{transition:all .2s ease-out;text-align:center}
+main.bookmarks table tr:nth-child(odd){background-color:#252735}
+main.bookmarks table tr:nth-child(even){background-color:#313445}
+main.bookmarks table tr:hover{background-color:#111218}
+
+
+main.bookmarks table tr td:first-child,main.bookmarks table tr th:first-child{text-align:left}
+main.bookmarks table tr > td.redacOk a{color:#60D6A7}
+main.bookmarks table tr > td.redacNok a{color:#FF5877}
+main.bookmarks table ul.labels > li{background-color:#FE5977;color:#fff;border-radius:50px;display:inline-block;padding:3px 10px;margin:2px}
+
+ul.labels li{background-color:#FE5977;color:#fff;border-radius:50px;display:inline-block;padding:3px 10px;margin:2px;font-size:2rem}
+td ul.labels li{font-size:1.6rem}
+main.bookmarks .btnRessource{color:#fff;background-color:#313445;text-decoration:none;border-radius:5px;padding:1.5rem 3rem 1.5rem 5rem;margin-bottom:.5rem;left:0;margin-bottom:1rem;display:inline-block;transition:all .3s ease-out}
+main.bookmarks .btnRessource:hover{background-color:#623a6c}
+main.bookmarks .btnRessource svg{position:absolute;width:20px;margin-top:-10px;margin-left:-30px;transition:all .3s ease-out}
+main.bookmarks .btnRessource:hover svg{margin-left:-35px}
+
+
+main.bookmarks table > tr:first-child th:last-child {
+   
+    
+}
+main.bookmarks #bookmarks > table th form{position: relative;}
+.nice-select{display:flex;flex-direction:column;position:absolute;text-align: left;height: 40px;overflow: hidden;}
+.nice-select:hover{height: inherit;overflow: visible;}
+.nice-select input.choose-list{display:none}
+.nice-select > div:first-child{cursor: pointer;background-color:#e79c82;border:2px solid #fff;border-radius: 5px;color:#fff;text-align: center;color:#fff;cursor:pointer;padding:1rem;}
+/*.nice-select > div:first-child::after,.nice-select input.choose-list:checked + label ~ div::after{border:3px solid #fff;content:"";position:absolute;width:10px;height:10px;border-top:0;border-left:0;transform:rotate(45deg);margin-right:10px;margin-top:-2px;right:0}
+*/
+.nice-select > div:first-child::after{border:3px solid #fff;content:"";position:absolute;width:10px;height:10px;border-top:0;border-left:0;transform:rotate(45deg);margin-right:15px;margin-top:-2px;right:0;z-index: 2;}
+
+.nice-select > label{cursor: pointer;;font-weight: normal;color:#fff;background-color:#e79c82;border-bottom:1px solid #e4bbae;opacity:0;transform-origin:top center;transition:all .1s ease-out;padding:1rem;font-size:1.6rem;padding-left:45px}
+.nice-select > label[for="divers"]{border-bottom:0;border-radius:0 0 5px 5px;}
+.nice-select:hover > label{opacity:1;display:flex;flex-direction:column;}
+.nice-select input.choose-list + label:before{background-color:#e4bbae;content:"";position:absolute;margin-left:-30px;width:20px;height:20px;border-top:0;border-left:0;transform:rotate(0deg);opacity:1;transition:all .2s ease-out;transition:scale(1);margin-top:-2px;border-radius:50px}
+.nice-select input.choose-list:checked + label:before{border:3px solid #fff;content:"";position:absolute;margin-left:-25px;width:5px;height:10px;border-top:0;border-left:0;transform:rotate(45deg);opacity:1;transition:all .2s ease-out;transition:scale(1);margin-top:-2px;border-radius:0;background-color:transparent}
+.nice-select input.choose-list:checked + label{background-color:#ff5677}
+.nice-select > div:last-child{border-bottom:0px solid #c7856f;text-align: center;background-color:#e79c82;border-radius: 5px;color:#fff;cursor:pointer;padding:1rem;transition:all .1s ease-out;opacity:0;border-left:1px solid #fff;border-right:1px solid #fff}
+.nice-select input.choose-list:checked + label:not(.all) ~ div{display:block;position:absolute;width:100%;padding-left:0rem;opacity:1;top:1px}
+
+main.bookmarks table tr.loader {height: 100vh;}
+main.bookmarks table tr.loader td {text-align: center;}
+main.bookmarks table tr.loader img{width: 200px;display: block;padding: 4rem;margin: 0 auto;}
+main.bookmarks table tr.error td {text-align: center;color:#879eaf;padding: 5rem;font-size: 2rem;}
+
+
+
+
+
+main.bookmarks.ressources table {table-layout: unset;}
+main.bookmarks.ressources table tr:first-child > th:first-child {width: calc(100% - 270px);}
+main.bookmarks.ressources table tr:first-child > th:last-child{width: 26px;padding-right: 1rem;width: 270px;}
+
+
+
+main.bookmarks.ressources table tr td:nth-child(2){width: 200px !important;}
+main.bookmarks.ressources table tr td:nth-child(3){width: 100px !important;}
+main.bookmarks.ressources table  tr td:nth-child(4){width: 120px !important;}
+
+main.bookmarks.ressources table tr td:first-child a{display: flex;align-items: center;}
+main.bookmarks.ressources table tr td:first-child a div:first-child{padding: 0 3rem 0 1rem;}
+main.bookmarks.ressources table tr td:first-child a > div:first-child{flex-basis: 15%;}
+main.bookmarks.ressources table tr td:first-child a > div:first-child img{max-width: 100px;}
+main.bookmarks.ressources table tr td:first-child a > div:last-child{flex-basis: 85%;}
+
+main.bookmarks.ressources .nice-select{width:241px;right: 0;z-index: 2;}
+
+main.bookmarks.ressources table tr td:nth-child(2),
+main.bookmarks.ressources table tr td:nth-child(3),
+main.bookmarks.ressources table tr td:nth-child(4){position: relative;}
+
+
+main.bookmarks.ressources table tr td:nth-child(2) a,
+main.bookmarks.ressources table tr td:nth-child(3) a,
+main.bookmarks.ressources table tr td:nth-child(4) a{
+    display: flex;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    align-items: center;
+    left: 0;
+    right: 0;
+    justify-content: center;
+    z-index: 1;
+}
+main.bookmarks table tbody tr:last-child td:first-child{border-radius: 0px 0px 0px 5px;}
+main.bookmarks table tbody tr:last-child td:last-child{border-radius: 0px 0px 5px 0px;}
+
+@-moz-document url-prefix() {
+    .nice-select {
+ margin-top: -2.4rem;
+    }
+  }
+
+/*
+main.bookmarks.ressources table > tr td:nth-child(2){width: 200px;padding: 2rem;}
+main.bookmarks.ressources table > tr td:nth-child(3){width: 150px;padding: 2rem;}
+main.bookmarks.ressources table > tr td:nth-child(4){width: 120px;padding: 2rem;}
+*/
+/*
+main.bookmarks.ressources table > tr td:first-child a{display: flex;align-items: center;}
+main.bookmarks.ressources table > tr td:first-child a div:first-child{padding: 0 3rem 0 1rem;}
+main.bookmarks.ressources table > tr td:first-child a > div:first-child{flex-basis: 15%;}
+main.bookmarks.ressources table > tr td:first-child a > div:last-child{flex-basis: 85%;}
+
+main.bookmarks.ressources table > tr td:nth-child(2),
+main.bookmarks.ressources table > tr td:nth-child(3),
+main.bookmarks.ressources table > tr td:nth-child(4){position: relative;}
+
+
+main.bookmarks.ressources table > tr td:nth-child(2) a,
+main.bookmarks.ressources table > tr td:nth-child(3) a,
+main.bookmarks.ressources table > tr td:nth-child(4) a{
+    display: flex;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    align-items: center;
+    left: 0;
+    right: 0;
+    justify-content: center;
+}*/
+
+
+
+
+
+
+
+
+
+
+
+/*
+main.bookmarks.ressources table{table-layout: initial;}
+
+main.bookmarks.ressources table tr:first-child > th:nth-child(2){width:200px}
+main.bookmarks.ressources table tr:first-child > th:nth-child(3){width:150px}
+main.bookmarks.ressources table tr:first-child > th:nth-child(4){width:120px}
+
+
+*/
+
+
+/*
+
+main.bookmarks.ressources table > tr:nth-child(2) td:nth-child(2){width: 200px;padding: 2rem;}
+main.bookmarks.ressources table > tr:nth-child(3) td:nth-child(3){width: 150px;padding: 2rem;}
+main.bookmarks.ressources table > tr:nth-child(4) td:nth-child(4){width: 120px;padding: 2rem;}
+
+*/
+
+/*
+main.bookmarks.ressources table > tr td:nth-child(2){width: 200px;padding: 2rem;}
+main.bookmarks.ressources table > tr td:nth-child(3){width: 150px;padding: 2rem;}
+main.bookmarks.ressources table > tr td:nth-child(4){width: 120px;padding: 2rem;}
+*/
+/*
+main.bookmarks.ressources table > tr td:first-child a{display: flex;align-items: center;}
+main.bookmarks.ressources table > tr td:first-child a div:first-child{padding: 0 3rem 0 1rem;}
+main.bookmarks.ressources table > tr td:first-child a > div:first-child{flex-basis: 15%;}
+main.bookmarks.ressources table > tr td:first-child a > div:last-child{flex-basis: 85%;}
+
+main.bookmarks.ressources table > tr td:nth-child(2),
+main.bookmarks.ressources table > tr td:nth-child(3),
+main.bookmarks.ressources table > tr td:nth-child(4){position: relative;}
+
+
+main.bookmarks.ressources table > tr td:nth-child(2) a,
+main.bookmarks.ressources table > tr td:nth-child(3) a,
+main.bookmarks.ressources table > tr td:nth-child(4) a{
+    display: flex;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    align-items: center;
+    left: 0;
+    right: 0;
+    justify-content: center;
+}*/
+
+
+/*
+main.bookmarks.ressources table{table-layout: fixed;}
+main.bookmarks.ressources table > tr:first-child th:nth-child(1){padding: 0rem;}
+main.bookmarks.ressources table > tr:first-child th:nth-child(1) form .nice-select{margin: 0.8rem;width: 250px}
+main.bookmarks.ressources table > tr:first-child th:nth-child(1) form .nice-select > div{background-color: #FE5977;}
+
+main.bookmarks.ressources table > tr:first-child th:nth-child(2){width: 200px;padding: 2rem;}
+main.bookmarks.ressources table > tr:first-child th:nth-child(3){width: 150px;padding: 2rem;}
+main.bookmarks.ressources table > tr:first-child th:nth-child(4){width: 120px;padding: 2rem;}
+
+
+main.bookmarks.ressources table > tr td:first-child a{display: flex;align-items: center;}
+main.bookmarks.ressources table > tr td:first-child a div:first-child{padding: 0 3rem 0 1rem;}
+main.bookmarks.ressources table > tr td:first-child a > div:first-child{flex-basis: 15%;}
+main.bookmarks.ressources table > tr td:first-child a > div:last-child{flex-basis: 85%;}
+main.bookmarks.ressources table > tr td:nth-child(2),
+main.bookmarks.ressources table > tr td:nth-child(3),
+main.bookmarks.ressources table > tr td:nth-child(4){position: relative;}
+
+
+main.bookmarks.ressources table > tr td:nth-child(2) a,
+main.bookmarks.ressources table > tr td:nth-child(3) a,
+main.bookmarks.ressources table > tr td:nth-child(4) a{
+    display: flex;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    align-items: center;
+    left: 0;
+    right: 0;
+    justify-content: center;
+}*/

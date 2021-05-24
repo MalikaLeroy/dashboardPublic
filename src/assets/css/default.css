@@ -1,0 +1,373 @@
+/*****************************************FONT FACE***************************************************/
+@font-face{font-family:Poppins;src:url(../fonts/Poppins-Black.eot);src:url(../fonts/Poppins-Black.eot?#iefix) format('embedded-opentype'),url(../fonts/Poppins-Black.woff2) format('woff2'),url(../fonts/Poppins-Black.woff) format('woff'),url(../fonts/Poppins-Black.ttf) format('truetype'),url(../fonts/Poppins-Black.svg#../fonts/Poppins-Black) format('svg');font-weight:900;font-style:normal;font-display:swap}@font-face{font-family:Poppins;src:url(../fonts/Poppins-SemiBold.eot);src:url(../fonts/Poppins-SemiBold.eot?#iefix) format('embedded-opentype'),url(../fonts/Poppins-SemiBold.woff2) format('woff2'),url(../fonts/Poppins-SemiBold.woff) format('woff'),url(../fonts/Poppins-SemiBold.ttf) format('truetype'),url(../fonts/Poppins-SemiBold.svg#../fonts/Poppins-SemiBold) format('svg');font-weight:600;font-style:normal;font-display:swap}@font-face{font-family:Poppins;src:url(../fonts/Poppins-Light.eot);src:url(../fonts/Poppins-Light.eot?#iefix) format('embedded-opentype'),url(../fonts/Poppins-Light.woff2) format('woff2'),url(../fonts/Poppins-Light.woff) format('woff'),url(../fonts/Poppins-Light.ttf) format('truetype'),url(../fonts/Poppins-Light.svg#../fonts/Poppins-Light) format('svg');font-weight:300;font-style:normal;font-display:swap}@font-face{font-family:Poppins;src:url(../fonts/Poppins-Bold.eot);src:url(../fonts/Poppins-Bold.eot?#iefix) format('embedded-opentype'),url(../fonts/Poppins-Bold.woff2) format('woff2'),url(../fonts/Poppins-Bold.woff) format('woff'),url(../fonts/Poppins-Bold.ttf) format('truetype'),url(../fonts/Poppins-Bold.svg#../fonts/Poppins-Bold) format('svg');font-weight:700;font-style:normal;font-display:swap}@font-face{font-family:Poppins;src:url(../fonts/Poppins-Regular.eot);src:url(../fonts/Poppins-Regular.eot?#iefix) format('embedded-opentype'),url(../fonts/Poppins-Regular.woff2) format('woff2'),url(../fonts/Poppins-Regular.woff) format('woff'),url(../fonts/Poppins-Regular.ttf) format('truetype'),url(../fonts/Poppins-Regular.svg#../fonts/Poppins-Regular) format('svg');font-weight:400;font-style:normal;font-display:swap}@font-face{font-family:Poppins;src:url(../fonts/Poppins-ExtraLight.eot);src:url(../fonts/Poppins-ExtraLight.eot?#iefix) format('embedded-opentype'),url(../fonts/Poppins-ExtraLight.woff2) format('woff2'),url(../fonts/Poppins-ExtraLight.woff) format('woff'),url(../fonts/Poppins-ExtraLight.ttf) format('truetype'),url(../fonts/Poppins-ExtraLight.svg#../fonts/Poppins-ExtraLight) format('svg');font-weight:200;font-style:normal;font-display:swap}
+/*****************************************END FONT FACE***********************************************/
+/*
+body::after{content:"";position: absolute;display: block;background-image: url(../img/background.jpg);
+background-size: 100%;z-index: 1;width: 100%;top:0;bottom:0;opacity: 0;animation: bigFadeIn;animation-duration: 1000ms;animation-fill-mode: forwards;animation-delay:200ms;
+
+height: 100vh;
+background-attachment: fixed;
+
+}
+*/
+/*
+body::after{
+    content: "";
+    position: absolute;
+    display: block;
+    background-image: url(../img/background.jpg);
+    
+    z-index: 1;
+    width: 100%;
+    top: 0;
+    opacity: 0;
+    animation: bigFadeIn;
+    animation-duration: 1000ms;
+    animation-fill-mode: forwards;
+    animation-delay: 200ms;
+    min-height: 1333px;
+}*/
+
+body{background:url(../img/background.jpg),#FDFDFD;background-repeat: no-repeat;background-attachment: fixed;
+
+min-height: 100vh;
+}
+body>div{position: relative;z-index: 2;}
+
+/******************************************TEMPLATING*******************************************/
+main{
+    display: grid;
+    grid-template-rows:auto 19rem auto;
+    grid-template-areas:
+        "titlePage titlePage titlePage titlePage"
+        "widgetStatistics widgetEmails toDolist toDolist"
+        "widgetNews widgetNews toDolist toDolist"
+        "anchorNews anchorNews anchorNews anchorNews";
+    grid-gap: 3rem;grid-template-columns: repeat(4,1fr);align-items: self-start;padding:3rem 18rem 6rem 6rem;
+min-height: 100vh;}
+main #statistics{grid-area: widgetStatistics;}
+main #emails{ grid-area: widgetEmails;}
+main #news{grid-area: widgetNews;}
+main #toDoList{grid-area: toDolist;}
+main #titlePage{grid-area: titlePage;}
+#anchorNew{display: none;grid-area: anchorNews;}
+main.bookmarks{
+    /*display: grid;*/
+    grid-template-areas:
+        "titlePage titlePage titlePage titlePage"
+        "bookmarks bookmarks bookmarks bookmarks";
+        grid-template-rows:auto;
+    /*grid-gap: 3rem;grid-template-columns: repeat(4,1fr);align-items: self-start;*/padding:3rem 18rem 3rem 6rem;
+    grid-template-rows:9rem auto auto;
+}
+
+main #titlePage{grid-area: titlePage;}
+main #bookmarks{grid-area: bookmarks;}
+
+main.article{
+    grid-template-areas:
+    "goToNext goToNext goToNext goToNext"
+    "titlePage titlePage titlePage titlePage"
+    "smallHeader smallHeader smallHeader smallHeader"
+    "summary summary summary summary"
+    "articleContent articleContent articleContent articleContent";
+}
+main.article #goToNext{grid-area: goToNext;}
+main.article .smallHeader{grid-area: smallHeader;}
+main.article #summary{grid-area: summary;}
+
+main.article #articleContent{grid-area: articleContent;}
+
+
+/******************************************END TEMPLATING*******************************************/
+
+main #titlePage{font-weight:600;font-size:4rem;font-weight:500;line-height:8rem;color:#623a6c}
+h1 .localDate{font-size:2rem;display:inline-block;margin-left:10px}
+h1 .localDate:before{content:"";position:absolute;display:inline-block;width:2px;height:20px;background-color:#623a6c;transform:rotate(20deg);margin:28px 0 0 -10px}
+
+
+
+
+
+
+/*searchBarr fixed*/
+#searchBarEdit > form {
+-webkit-transition: all .2s ease-in-out;
+transition: all .2s ease-in-out;
+transform-origin: center top;}
+
+
+#goToHeader.js-sticky #searchBarEdit > form {position:fixed;z-index: 10;top:0;
+width: 100%;
+display: flex;
+padding: 10px 20% 10px 20%;
+background-color: #EFEEEC;box-shadow: 0 0 10px 0px #a7a7a7;border-radius: 0;
+}
+
+#goToHeader.js-sticky #searchBarEdit > button{width: 46px;height: 46px;}
+
+#goToHeader.js-sticky #searchBarEdit > button span{top:-5px;right: 2px;}
+
+
+
+#goToHeader.js-sticky  #searchBarEdit > form input[type="search"]{border-radius:5px 0 0 5px}
+#searchBarEdit form button{background-color: #fff;border-radius:0 5px 5px 0}
+#goToHeader.js-sticky nav{z-index: 12;}
+#goToHeader.js-sticky nav ul li:first-child{position: fixed;
+   
+    top:0;right: 0;background-color: #313445;z-index: 11;width: 118px;}
+
+#goToHeader.js-sticky #searchBarEdit form input[type="search"]{font-size: 1.6rem;}
+
+#goToHeader.js-sticky nav ul li:first-child a img{width: 30%;}
+#goToHeader.js-sticky  nav ul li:first-child a{padding: 0.7rem 0 ;}
+
+#goToHeader.js-sticky nav ul li:nth-child(2){margin-top: 17rem;}
+
+#goToHeader.js-sticky #searchBarEdit.home .autocomplete{
+    position: fixed;
+
+    z-index: 2;
+    width: 60%;
+    
+}
+#goToHeader.js-sticky  #searchBarEdit >button {display: none;}
+#goToHeader.js-sticky {height:150px;transition:all .1s ease;}
+/*
+#goToHeader.js-sticky+main{margin-top: 10rem;}
+*/
+
+
+
+/* Extra large devices (large desktops, 1200px and up)*/
+/*
+body::before{font-size:1rem;content:"Extra Large desktops";display:inline-block;background-color:#FF385E;color:#fff;padding:1rem;position:fixed;z-index:10000;border-radius:0 0 15px 0}
+*/
+/*Large devices (desktops, 992px and up)*/
+@media (max-width: 1199px) { 
+/*
+body::before{font-size:1rem;content:"Desktops";display:inline-block;background-color:#FF385E;color:#fff;padding:1rem;position:fixed;z-index:10000;border-radius:0 0 15px 0}
+*/
+main{padding: 2rem 12.5rem 6rem 2rem;grid-gap: 2rem;font-size: 1.5rem;grid-template-rows: 7rem 19rem auto;}
+html main #titlePage{font-size: 3.5rem;}
+header #searchBarEdit{padding: 4rem 0 0rem 0;}
+main .widget h2{font-size: 1.8rem;}
+main #toDoList h2{font-size: 1.8rem;}
+main .widget#emails h2{background-size: 20px,auto;background-position: 90% center;}
+main .widget#statistics h2{background-size: 20px,auto;background-position: 90% center;}
+main .widget#news h2{background-size: 20px,auto;background-position: 95% center;}
+header nav ul li a{padding: 1.5rem;}
+header nav ul li a svg{width: 30px;}
+main .widget#news a>div:last-child{padding: 1rem 1rem 1rem 0;}
+main .widget#news a p:first-child{font-size: 1.4rem;line-height: 1.6rem;}
+main .widget#news a p:last-child{margin-top: 0.5rem;}
+main #toDoList ul li>form:first-child button span{font-size: 1.3rem;line-height: 1.8rem;}
+main #toDoList ul li.temporaryTask span:first-child{font-size: 1.3rem;line-height: 1.8rem;padding-top:1rem;padding-bottom: 1rem;}
+main #toDoList ul li > form:first-child button span:before{border-width: 3px;top: calc(50% - 10px);}
+main #toDoList ul li form:last-child span{width: 40px;}
+main #toDoList > form input[type="text"]{padding: 0.5rem;}
+main.bookmarks{padding:  2rem 11.5rem 6rem 2rem;}
+html main.bookmarks h1#titlePage span:first-child{font-size: 2.5rem;}
+html main.bookmarks h1#titlePage span svg{width: 20px;top:8px}
+html main.bookmarks table tr >td a{padding: 1.5rem;}
+html main.bookmarks table tr > td a h2 {font-size: 1.6rem;margin-bottom: 0.5rem;}
+html main.bookmarks table ul.labels > li{padding: 2px 5px;font-size: 1.3rem;}
+html main.bookmarks table tr > td a{font-size: 1.3rem;}
+
+html main.bookmarks.ressources table tr td:first-child a div:first-child{padding: 0 2rem 0 0rem;}
+header .modal .modal-wrap{width: 70%;}
+header .modal .modal-wrap.ressources{width: 90%;}
+header .modal .modal-content div label,header .modal .modal-content div p,
+header .modal .modal-content div label,header .modal .modal-content div p{font-size: 1.5rem;}
+
+html main.article{padding:  2rem 11.5rem 6rem 2rem;}
+html main.article .smallHeader > div img{width: 150px;height: 150px;}
+html main.article #articleContent, main.article #summary{padding: 3rem;}
+main .widget#news a>div:first-child img{max-width: 100%;}
+
+main .widget#news div{padding: 1.5rem;}
+
+
+@supports (-webkit-touch-callout: none) {
+    /* CSS specific to iOS devices */ 
+    html main.bookmarks table thead tr:first-child{background: #ff5677;}
+    html main.bookmarks .nice-select > div:first-child,
+    html .nice-select > label{background: #ff5677;}
+    header nav li:first-child a:link,
+    header nav li:first-child a:visited, 
+    header nav li:first-child a:hover,
+    header nav li:first-child a:active
+    {background: none;-webkit-text-fill-color:initial;-webkit-background-clip:none}
+    header nav ul li a:link p.title,
+    header nav ul li a:visited p.title,
+    header nav ul li a:hover p.title,
+    header nav ul li a:active p.title{color:#DA8880;padding-left: 2px;}
+    header nav ul li:first-child a img{width: 66px;position: relative;left: 2px}
+    main .widget#news ul li:nth-child(1) a>div:first-child img,
+    main .widget#news ul li:nth-child(2) a>div:first-child img {height:29.7px;}
+    main .widget#news ul li:nth-child(3) a>div:first-child img,
+    main .widget#news ul li:nth-child(4) a>div:first-child img {height:52.59px;}
+    main #toDoList > form button{border:2px solid #313445;border-left: 0;border-right: 0;}
+    #goToHeader.js-sticky #searchBarEdit form button{border-radius: 50px;position: relative;margin-left: -75px;
+    background-color: transparent;}
+    
+  }
+
+  #goToHeader.js-sticky nav ul li:first-child{width: 108px;}
+  #goToHeader.js-sticky nav ul li:first-child a{padding: 1.15rem 0;}
+  #goToHeader.js-sticky nav ul li:nth-child(2){margin-top: 19rem;}
+  /*#goToHeader.js-sticky+main{margin-top: 15rem;}*/
+  #goToHeader.js-sticky {height:100px}
+}
+
+/* Medium devices (tablets, 768px and up)*/
+@media (max-width: 992px) { 
+    /*
+body::before{font-size:1rem;content:"Tablets";display:inline-block;background-color:#FF385E;color:#fff;padding:1rem;position:fixed;z-index:10000;border-radius:0 0 15px 0}
+
+*/
+#root main{padding:4rem 4rem 5rem 4rem;    grid-gap: 4rem;
+    grid-template-areas:
+    "titlePage titlePage titlePage titlePage"
+"widgetStatistics widgetStatistics widgetEmails widgetEmails"
+"anchorNews anchorNews anchorNews anchorNews"
+"toDolist toDolist toDolist toDolist"
+"widgetNews widgetNews widgetNews widgetNews"}
+
+#root #searchBarEdit{display: none;}
+#root main{grid-template-rows: 3rem 19rem auto;}
+
+#root nav{text-align: center;width: 100%;z-index: 1;min-height: inherit;height: 81.81px;position: relative;}
+#root nav ul{display: block;text-align: center;}
+#root nav ul li{display: none;}
+#root nav ul li:nth-child(1),#root nav ul li:nth-child(8){display:inline-block}
+#root nav ul li:nth-child(8){position: absolute;right: 0;top:0rem}
+#root nav ul li:first-child a{border-bottom:0}
+#root nav ul li:last-child a{padding:2.8rem;}
+#root header nav ul li a svg{width: 20px;}
+#root nav ul li a span{display: none;}
+#root #js_goToTop{display: none;}
+#root h1 .localDate:before{display: none;}
+#root main #titlePage{color:transparent;}
+#root main #titlePage .localDate{color:#313445;display: block;margin-top: -9rem;margin-left: 0;text-align: center;}
+#root main #titlePage .localDate::first-letter{text-transform: uppercase;}
+#root main .widget#news a>div:first-child img{width: 50px;}
+#root footer{padding:2rem 0;text-align: center;}
+/*
+#root nav{width: 100%;z-index: 1;min-height: inherit;}
+#root nav ul li{display: none;}
+#root nav ul li:nth-child(1){margin: 0 auto;}
+#root nav ul li:nth-child(1),#root nav ul li:nth-child(2){display:inline-block}
+#root nav ul li:nth-child(2){display: inline-blockf;float: right;;}
+*/
+
+main #anchorNew{margin: 0 auto;font-size: 1.8rem;text-align: center;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+    padding: 2rem;
+    width: 80%;display: block;background:url(./../img/icon-rss.svg),linear-gradient(0.25turn,#ff5677,#e79c82);background-size:20px,auto;background-repeat:no-repeat,no-repeat;background-position:98% center
+
+    ;box-shadow: 0 0 20px 5px #cfcfcf;}
+    main #anchorNew img{width: 18px;position: absolute;margin-left: 2rem;margin-top: -0.25rem;}
+    main #toDoList ul li.temporaryTask span:first-child{width: calc(100% - 60px);padding: 0.9rem 0rem 0.9rem 4rem;
+   }
+
+   #goToHeader.js-sticky+main{margin-top: 0;}
+   #goToHeader.js-sticky nav ul li:first-child{width: 100%;}
+   #goToHeader.js-sticky nav {position: fixed;    height:60px;}
+   #goToHeader.js-sticky nav ul li:first-child a img{width: 40px;}
+   #root #goToHeader.js-sticky nav ul li:nth-child(8){background-color: red;position: fixed;z-index: 500;}
+   #root #goToHeader.js-sticky nav ul li:last-child a{padding: 1.85rem;}
+   #root #goToHeader.js-sticky nav ul li:last-child a:hover svg{transform:translateY(0) scale(1) ;}
+   /*#root #goToHeader.js-sticky+main{margin-top: 18rem;}*/
+   #goToHeader.js-sticky {height:81.8px}
+
+   #root main.bookmarks {
+      /* display: grid; */
+      grid-template-areas:
+      "titlePage titlePage titlePage titlePage"
+      "bookmarks bookmarks bookmarks bookmarks";
+  grid-template-rows: auto;
+  padding: 3rem 3rem 3rem 3rem;
+  grid-template-rows: 5rem auto auto;
+}
+#root main.bookmarks #titlePage{color: inherit;font-size: 3rem;}
+
+
+html main.article{
+   display: block;
+}
+html main.article .smallHeader > div img{display: none;}
+html main.article .smallHeader> ul{display: none;}
+html main.article .smallHeader > div > div{width: 100%;}
+}
+
+
+/* Small devices (landscape phones, 576px and up)*/
+@media (max-width: 767px) {
+  /*  
+body::before{font-size:1rem;content:"Landscape phone and up";display:inline-block;background-color:#FF385E;color:#fff;padding:1rem;position:fixed;z-index:10000;border-radius:0 0 15px 0}
+*/
+
+#root main{padding:4rem 4rem 5rem 4rem;    grid-gap: 4rem;
+    grid-template-areas:
+    "titlePage titlePage titlePage titlePage titlePage"
+"widgetStatistics widgetStatistics widgetEmails widgetEmails anchorNews"
+"toDolist toDolist toDolist toDolist toDolist"
+"widgetNews widgetNews widgetNews widgetNews widgetNews";align-items: stretch;}
+main #anchorNew{font-weight:relative;font-size: 1.6rem;background-position: 95% 10%;background-size: 10px,auto;text-align: center;}
+main #anchorNew img{margin-top: 2.5rem;margin-left: -5rem;height: 20px;}
+#root main #titlePage .localDate{margin-top: -10.5rem;}
+main #anchorNew{width: 100%;}
+body #login>div{padding: 4rem;height: 90vh;width: 90%;justify-content: center;}
+body #login > div > img{width: 70px;}
+body #login h1{font-size: 2rem;padding: 1rem;}
+#root main{padding: 2rem;grid-template-rows:3rem 7.5rem auto;grid-gap:2rem}
+#root .widget#statistics  a p:last-child,
+#root .widget#emails  a p:last-child{display: none;}
+#root main .widget#statistics h2,#root main .widget#emails h2{display: none;}
+#root .widget#statistics {padding: 1rem;
+background: url(./../img/icon-stat.svg),linear-gradient(
+0.25turn
+,#623a6c,#b04c74);background-repeat: no-repeat;color:#fff;background-position:95% 5%;background-size:10px, auto;}
+#root .widget#emails a,
+#root .widget#statistics a{color:#fff}
+
+#root .widget#emails{padding: 1rem;background: url(./../img/icon-mail.svg),linear-gradient(
+    0.25turn
+    ,#b04c74,#ff5677);background-repeat: no-repeat;background-position:95% 10%;background-size:10px, auto;}
+
+    #root main{padding-bottom: 5.5rem;}
+    main h1 .localDate{font-size: 1.8rem;}
+    #root .widget a p span{font-size: 3rem;margin:0.5rem 0;}
+    #root #statistics.widget a, #root #emails.widget a{font-size: 1rem;}
+
+    body #login>div{height: 100vh;width: 100vh;}
+#root footer{font-size: 1rem;}
+
+#root main.bookmarks {padding: 3rem 0.5rem;}
+html main.bookmarks.ressources table tr td:first-child a div:first-child{display: none;}
+main.bookmarks.ressources table tr td:nth-child(4){display: none;}
+html main.bookmarks.ressources table tr td:nth-child(1){width: 70%;}
+html main.bookmarks.ressources table tr td:nth-child(3) {width: 0 !important;}
+html main.bookmarks.ressources table tr td:nth-child(3) a{display: none;}
+html main.bookmarks.ressources table tr td:nth-child(2){width: 300px !important;}
+html main.bookmarks table ul.labels > li{font-size: 1.2rem;padding:0 3px ;}
+}
+
+
+
+
+
+/*Extra small devices (portrait phones, less than 576px)*/
+@media (max-width: 575px) {
+   /* 
+body::before{font-size:1rem;content:"Portrait phones";display:inline-block;background-color:#FF385E;color:#fff;padding:1rem;position:fixed;z-index:10;border-radius:0 0 15px 0}
+
+*/
+}
+
+
+

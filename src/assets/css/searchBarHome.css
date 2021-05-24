@@ -1,0 +1,71 @@
+#searchBarEdit.home{display: flex;flex-direction: column;align-items: center;}
+#searchBarEdit.home form{height: 60px;position: relative;}
+#searchBarEdit.home .autocomplete{position: relative;width: 50%;}
+#searchBarEdit.home .autocomplete > div{overflow-x: hidden;width: 100%;position: absolute;min-height: 37rem;
+border-radius: 0 0 5px 5px;
+
+}
+#searchBarEdit.home .autocomplete > div > div{
+position: absolute;background-color: #292b38;z-index: 2;overflow-y: scroll;max-height: 37rem;width: calc(100% + 19px);
+background-color: #fff;
+}
+#searchBarEdit.home .autocomplete ul {display: flex;}
+#searchBarEdit.home .autocomplete ul li ul{display: flex;flex-direction: column;position: relative;}
+#searchBarEdit.home .autocomplete div > ul > li:first-child{border-right:3px solid #E9EAE5;width: 50%;}
+#searchBarEdit.home .autocomplete div > ul > li:last-child{width: 50%;}
+
+#searchBarEdit.home .autocomplete ul li ul li:nth-child(even) a {
+
+    background-color: #eeeeee;
+}
+#searchBarEdit.home .autocomplete ul li ul li:nth-child(odd) a {
+    background-color: #f7f7f7;
+}
+#searchBarEdit.home .autocomplete a{padding: 1.5rem 2rem;display: block;text-decoration: inherit;line-height: 1.4rem;font-size: 1.4rem;}
+#searchBarEdit.home .autocomplete div > ul > li span{text-align: center;display: block;padding: 1.5rem 0;
+font-size: 1.8rem;font-weight: 600;background-color:#cbccc7;color:#fff
+}
+
+
+
+
+
+
+/*
+
+#searchBarEdit.home .autocomplete div > ul > li:first-child span{    background:linear-gradient(
+0.25turn,#623a6c,#b04c74);}
+#searchBarEdit.home .autocomplete div > ul > li:last-child span{    background:linear-gradient(
+0.25turn,#b04c74,#623a6c);}*/
+
+
+ #searchBarEdit.home .autocomplete div > ul > li span svg{position: absolute; }
+ #searchBarEdit.home .autocomplete div > ul > li:last-child span svg{margin-left: -3rem;margin-top: -0.3rem;}
+ #searchBarEdit.home .autocomplete div > ul > li:first-child span svg{margin-left: -3rem;margin-top: -0.2rem;}
+ 
+ #searchBarEdit.home .scroll{
+    text-align: center;display: inline-block;
+   
+    position: absolute;
+    z-index: 99999;
+    border-radius: 5px;
+    cursor: pointer;height: 40px;width: 40px;
+float: right;top:32rem;left: calc(50% + -20px);}
+
+#searchBarEdit.home .scroll::before {
+    content: "";
+    position: relative;
+    display: inline-block;
+    transform: rotate(
+135deg
+);
+    border-top: 3px solid #879eaf;
+    border-right: 3px solid #879eaf;
+    padding: 1rem;
+    margin: 0.2rem 0 0 0;
+
+}
+
+#searchBarEdit.home .load{background-color:#f7f7f7;display: flex;padding:0.3rem 1rem;margin-top: -5.6rem;}
+#searchBarEdit.home .load img{width: 50px;margin: auto;}
+#searchBarEdit.home .dataEmpty{text-align: center;padding: 2rem 0;color:#bfccd6; background-color: rgb(255, 255, 255,0.15);}
